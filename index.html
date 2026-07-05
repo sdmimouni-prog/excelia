@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Excelia Immobilier, résidences et resorts premium à Saïdia, Marrakech et Fnideq."
+    >
+    <title>Excelia Immobilier - Résidences & Resorts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Marcellus&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="icon" href="assets/excelia/logo-excelia-transparent.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 48 48">
+        <path d="M12 42V10l12-5 12 5v32M18 16h3M27 16h3M18 24h3M27 24h3M18 32h3M27 32h3M8 42h32" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path d="M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2ZM8 2v4M16 2v4M3 9h18" />
+      </symbol>
+      <symbol id="icon-car" viewBox="0 0 24 24">
+        <path d="M4 13 6.2 7.8A3 3 0 0 1 9 6h6a3 3 0 0 1 2.8 1.8L20 13M5 13h14v6H5zM7 19v2M17 19v2M7.5 16h.1M16.4 16h.1" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m6 12 4 4 8-9" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m7 10 5 5 5-5" />
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24">
+        <path d="M3 11.5 12 4l9 7.5M5 10.5V21h14V10.5M9 21v-6h6v6" />
+      </symbol>
+      <symbol id="icon-key" viewBox="0 0 24 24">
+        <path d="M14 8a5 5 0 1 0 1 6l2 2h3v3h3v-3l-6-6" />
+        <path d="M7 13h.01" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5zM12 15v3" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="M3 6h18v12H3zM3 7l9 6 9-6" />
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z" />
+        <circle cx="12" cy="9" r="2.4" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M7 3h4l2 5-2.5 1.6a13.5 13.5 0 0 0 4.9 4.9L17 13l4 2v4a2 2 0 0 1-2 2C10.2 21 3 13.8 3 5a2 2 0 0 1 2-2h2Z" />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="M9 7v10l8-5Z" />
+      </symbol>
+      <symbol id="icon-ruler" viewBox="0 0 24 24">
+        <path d="M6 3h12M8 3v18M16 3v18M6 21h12M8 8h4M8 13h5M8 18h4" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="m16 16 5 5" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 3 20 6v6c0 5-3.2 8.5-8 10-4.8-1.5-8-5-8-10V6z" />
+        <path d="m8.5 12 2.4 2.4 4.9-5.2" />
+      </symbol>
+      <symbol id="icon-wallet" viewBox="0 0 24 24">
+        <path d="M4 7h15a2 2 0 0 1 2 2v10H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h13" />
+        <path d="M16 12h5v4h-5a2 2 0 0 1 0-4Z" />
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+        <path d="M16 3.5A12.4 12.4 0 0 0 5.3 22.2L4 28l5.9-1.3A12.4 12.4 0 1 0 16 3.5Z" />
+        <path d="M11.5 10.2c.3-.7.6-.8 1.1-.8h.8c.3 0 .6.1.8.6l1 2.4c.1.3.1.6-.1.9l-.7.9a.6.6 0 0 0 0 .7 9 9 0 0 0 3.9 3.2c.3.1.5.1.7-.1l1.1-1.2c.2-.3.5-.3.9-.2l2.3 1.1c.4.2.6.5.5.9-.1 1-.8 2.1-1.7 2.5-1.2.5-3 .3-5.7-1.2-3.4-1.9-5.6-5.1-6.1-6.9-.5-1.6.1-2.6 1.2-2.8Z" />
+      </symbol>
+    </svg>
+
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="#accueil" aria-label="Excelia Immobilier">
+          <img src="assets/excelia/logo-excelia-transparent.png" alt="Excelia Résidences & Resorts">
+        </a>
+
+        <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navigation principale" data-mobile-menu>
+          <a class="active" href="#accueil">Accueil</a>
+          <a href="#projets">Nos projets <svg><use href="#icon-chevron"></use></svg></a>
+          <a href="#investir">Investir <svg><use href="#icon-chevron"></use></svg></a>
+          <a href="#implantations">À propos</a>
+          <a href="#actualites">Actualités</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="phone-link" href="tel:0520327193">
+            <svg><use href="#icon-phone"></use></svg>
+            05 20 32 71 93
+          </a>
+          <button class="lang-switch" type="button">
+            FR <svg><use href="#icon-chevron"></use></svg>
+          </button>
+          <a class="btn btn-gold" href="#newsletter">Être rappelé</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="accueil">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow gold">Vivre entre mer, golf & montagnes de l'Atlas</p>
+            <h1 id="hero-title">Des lieux d'exception,<br><em>des vies à part.</em></h1>
+            <p class="hero-lead">
+              Appartements, villas et terrains à Saïdia, Marrakech et Fnideq.<br>
+              Des résidences livrables de suite, avec titres fonciers disponibles,<br>
+              à partir de 320 000 DH.
+            </p>
+            <div class="hero-actions-row">
+              <a class="btn btn-primary" href="#projets">Découvrir nos projets</a>
+              <a class="btn btn-outline-light" href="#video">
+                <span class="play-circle"><svg><use href="#icon-play"></use></svg></span>
+                Voir la vidéo
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-stats-card" aria-label="Chiffres clés Excelia">
+            <div class="stat-cell">
+              <svg><use href="#icon-building"></use></svg>
+              <p><strong>7</strong><span>Projets</span></p>
+            </div>
+            <div class="stat-cell">
+              <svg><use href="#icon-map-pin"></use></svg>
+              <p><strong>3</strong><span>Villes</span></p>
+            </div>
+            <div class="stat-cell">
+              <svg><use href="#icon-key"></use></svg>
+              <p><strong>100%</strong><span>Titres fonciers</span></p>
+            </div>
+            <div class="stat-cell">
+              <svg><use href="#icon-check"></use></svg>
+              <p><strong>Livrables</strong><span>de suite</span></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="search-overlay" aria-label="Recherche de biens">
+        <div class="container">
+          <form class="search-panel" action="#" method="get">
+            <div class="search-field dropdown" data-dropdown>
+              <svg><use href="#icon-map-pin"></use></svg>
+              <button type="button" aria-expanded="false" data-dropdown-button>
+                <span>Ville</span>
+                <strong data-dropdown-value>Toutes les villes</strong>
+              </button>
+              <svg class="chevron"><use href="#icon-chevron"></use></svg>
+              <ul class="dropdown-menu" data-dropdown-menu>
+                <li><button type="button">Toutes les villes</button></li>
+                <li><button type="button">Saïdia</button></li>
+                <li><button type="button">Marrakech</button></li>
+                <li><button type="button">Fnideq</button></li>
+              </ul>
+            </div>
+            <div class="search-field dropdown" data-dropdown>
+              <svg><use href="#icon-home"></use></svg>
+              <button type="button" aria-expanded="false" data-dropdown-button>
+                <span>Type de bien</span>
+                <strong data-dropdown-value>Tous les types</strong>
+              </button>
+              <svg class="chevron"><use href="#icon-chevron"></use></svg>
+              <ul class="dropdown-menu" data-dropdown-menu>
+                <li><button type="button">Tous les types</button></li>
+                <li><button type="button">Appartements</button></li>
+                <li><button type="button">Villas</button></li>
+                <li><button type="button">Terrains</button></li>
+              </ul>
+            </div>
+            <div class="search-field dropdown" data-dropdown>
+              <svg><use href="#icon-wallet"></use></svg>
+              <button type="button" aria-expanded="false" data-dropdown-button>
+                <span>Budget max</span>
+                <strong data-dropdown-value>Tous budgets</strong>
+              </button>
+              <svg class="chevron"><use href="#icon-chevron"></use></svg>
+              <ul class="dropdown-menu" data-dropdown-menu>
+                <li><button type="button">Tous budgets</button></li>
+                <li><button type="button">320 000 DH</button></li>
+                <li><button type="button">700 000 DH</button></li>
+                <li><button type="button">1 500 000 DH</button></li>
+              </ul>
+            </div>
+            <div class="search-field dropdown" data-dropdown>
+              <svg><use href="#icon-ruler"></use></svg>
+              <button type="button" aria-expanded="false" data-dropdown-button>
+                <span>Surface min</span>
+                <strong data-dropdown-value>Toutes surfaces</strong>
+              </button>
+              <svg class="chevron"><use href="#icon-chevron"></use></svg>
+              <ul class="dropdown-menu" data-dropdown-menu>
+                <li><button type="button">Toutes surfaces</button></li>
+                <li><button type="button">50 m²</button></li>
+                <li><button type="button">80 m²</button></li>
+                <li><button type="button">120 m²</button></li>
+              </ul>
+            </div>
+            <div class="search-field dropdown" data-dropdown>
+              <svg><use href="#icon-car"></use></svg>
+              <button type="button" aria-expanded="false" data-dropdown-button>
+                <span>Chambres</span>
+                <strong data-dropdown-value>Toutes</strong>
+              </button>
+              <svg class="chevron"><use href="#icon-chevron"></use></svg>
+              <ul class="dropdown-menu" data-dropdown-menu>
+                <li><button type="button">Toutes</button></li>
+                <li><button type="button">1 chambre</button></li>
+                <li><button type="button">2 chambres</button></li>
+                <li><button type="button">3 chambres</button></li>
+              </ul>
+            </div>
+            <button class="btn btn-search" type="submit">
+              <svg><use href="#icon-search"></use></svg>
+              Rechercher
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="trust-band" aria-label="Réassurance et partenaires">
+        <div class="container trust-inner">
+          <div class="trust-items">
+            <div class="trust-item">
+              <svg><use href="#icon-shield"></use></svg>
+              <p><strong>Titres fonciers</strong><span>disponibles</span></p>
+            </div>
+            <div class="trust-item">
+              <svg><use href="#icon-home"></use></svg>
+              <p><strong>Livrables</strong><span>de suite</span></p>
+            </div>
+            <div class="trust-item">
+              <svg><use href="#icon-lock"></use></svg>
+              <p><strong>Sécurité</strong><span>24/7</span></p>
+            </div>
+            <div class="trust-item">
+              <svg><use href="#icon-wallet"></use></svg>
+              <p><strong>Accompagnement</strong><span>personnalisé</span></p>
+            </div>
+          </div>
+          <div class="partner-logos" aria-label="Banques partenaires">
+            <a class="partner-logo" href="https://www.groupebcp.com/fr" target="_blank" rel="noopener" aria-label="Banque Populaire">
+              <img src="assets/excelia/partners/banque-populaire.svg" alt="Banque Populaire">
+            </a>
+            <a class="partner-logo" href="https://www.attijariwafabank.com/fr" target="_blank" rel="noopener" aria-label="Attijariwafa bank">
+              <img src="assets/excelia/partners/attijariwafa-bank.png" alt="Attijariwafa bank">
+            </a>
+            <a class="partner-logo" href="https://www.bankofafrica.ma/fr" target="_blank" rel="noopener" aria-label="BMCE Bank / Bank of Africa">
+              <img src="assets/excelia/partners/bmce-bank-of-africa.png" alt="BMCE Bank / Bank of Africa">
+            </a>
+            <a class="partner-logo" href="https://www.creditagricole.ma/fr" target="_blank" rel="noopener" aria-label="Crédit Agricole du Maroc">
+              <img src="assets/excelia/partners/credit-agricole-maroc.png" alt="Crédit Agricole du Maroc">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section-pad" id="projets" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-head project-head">
+            <div>
+              <p class="eyebrow">Nos projets</p>
+              <h2 id="projects-title">Sept projets, trois horizons</h2>
+              <p>De l'appartement en bord de Méditerranée au terrain de villa face à l'Atlas.</p>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Filtrer les projets">
+              <button class="active" type="button" data-filter="all">Tous les projets</button>
+              <button type="button" data-filter="saidia">Saïdia</button>
+              <button type="button" data-filter="marrakech">Marrakech</button>
+              <button type="button" data-filter="fnideq">Fnideq</button>
+            </div>
+          </div>
+
+          <div class="project-slider">
+            <div class="project-track" data-project-track>
+              <article class="project-card" data-city="saidia">
+                <img src="assets/excelia/project-jardins-moulouya.jpg" alt="Jardins de Moulouya">
+                <div class="project-body">
+                  <h3>Jardins de Moulouya</h3>
+                  <p>Appartements & commerces</p>
+                  <strong>À partir de 320 000 DH</strong>
+                </div>
+              </article>
+              <article class="project-card" data-city="saidia">
+                <img src="assets/excelia/project-residence-al-karam.jpg" alt="Résidence Al Karam">
+                <div class="project-body">
+                  <h3>Résidence Al Karam</h3>
+                  <p>Appartements avec piscine</p>
+                  <strong>À partir de 700 000 DH</strong>
+                </div>
+              </article>
+              <article class="project-card" data-city="saidia">
+                <img src="assets/excelia/project-perle-mediterranee.jpg" alt="La Perle de la Méditerranée">
+                <div class="project-body">
+                  <h3>La Perle de la Méditerranée</h3>
+                  <p>Villas avec piscine collective</p>
+                  <strong>À partir de 1 122 000 DH</strong>
+                </div>
+              </article>
+              <article class="project-card featured" data-city="saidia">
+                <img src="assets/excelia/project-perle-orientale.jpg" alt="La Perle de l'Orientale">
+                <div class="project-body">
+                  <h3>La Perle de l'Orientale</h3>
+                  <p>Pieds dans l'eau, face au golf</p>
+                  <strong>À partir de 1 500 000 DH</strong>
+                </div>
+              </article>
+              <article class="project-card" data-city="marrakech">
+                <img src="assets/excelia/project-agr-premium.jpg" alt="AGR Premium">
+                <div class="project-body">
+                  <h3>AGR Premium</h3>
+                  <p>Terrains pour villas, prêts à construire</p>
+                  <strong>Sur demande</strong>
+                </div>
+              </article>
+              <article class="project-card" data-city="fnideq">
+                <img src="assets/excelia/project-alcudia-smir.jpg" alt="Alcudia Smir">
+                <div class="project-body">
+                  <h3>Alcudia Smir</h3>
+                  <p>Bientôt en commercialisation</p>
+                  <strong>Être informé en avant-première <svg><use href="#icon-arrow"></use></svg></strong>
+                </div>
+              </article>
+            </div>
+            <button class="slider-next" type="button" aria-label="Voir les projets suivants" data-slider-next>
+              <svg><use href="#icon-chevron"></use></svg>
+            </button>
+          </div>
+
+          <div class="centered-action">
+            <a class="btn btn-outline-navy" href="#projets">Voir tous les projets</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="finance-invest section-pad" id="investir" aria-label="Simulateur et investissement">
+        <div class="container finance-grid">
+          <article class="credit-card" aria-labelledby="credit-title">
+            <p class="eyebrow gold">Simulez votre crédit</p>
+            <h2 id="credit-title">Estimez vos mensualités</h2>
+            <p>Un simulateur simple et rapide pour concrétiser votre projet immobilier.</p>
+
+            <div class="simulator-layout">
+              <div class="range-list">
+                <label class="range-row">
+                  <span>Montant du bien <strong data-amount-label>1 200 000 DH</strong></span>
+                  <input type="range" min="320000" max="2500000" step="10000" value="1200000" data-amount>
+                </label>
+                <label class="range-row">
+                  <span>Apport personnel <strong data-down-label>300 000 DH</strong></span>
+                  <input type="range" min="0" max="1000000" step="10000" value="300000" data-down>
+                </label>
+                <label class="range-row">
+                  <span>Durée du prêt <strong data-years-label>20 ans</strong></span>
+                  <input type="range" min="5" max="30" step="1" value="20" data-years>
+                </label>
+                <label class="range-row">
+                  <span>Taux d'intérêt <strong data-rate-label>4,5 %</strong></span>
+                  <input type="range" min="2.5" max="7" step="0.1" value="4.5" data-rate>
+                </label>
+              </div>
+
+              <div class="phone-mockup" aria-label="Résumé du financement">
+                <div class="phone-notch"></div>
+                <dl>
+                  <dt>Montant du bien</dt>
+                  <dd data-phone-amount>1 200 000 DH</dd>
+                  <dt>Apport personnel</dt>
+                  <dd data-phone-down>300 000 DH</dd>
+                  <dt>Durée du prêt</dt>
+                  <dd data-phone-years>20 ans</dd>
+                  <dt>Taux d'intérêt</dt>
+                  <dd data-phone-rate>4,5 %</dd>
+                  <dt>Mensualité estimée</dt>
+                  <dd data-phone-monthly>6 282 DH / mois</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="monthly-box">
+              <span>Votre mensualité estimée</span>
+              <strong data-monthly>6 282 DH / mois</strong>
+            </div>
+            <button class="btn btn-gold wide" type="button">Simuler mon crédit</button>
+            <p class="small-note">Simulation à titre indicatif, sans engagement.</p>
+          </article>
+
+          <div class="invest-stack">
+            <article class="investment-card">
+              <div>
+                <p class="eyebrow navy">Pourquoi investir ?</p>
+                <h2>Des emplacements<br>à forte valeur</h2>
+                <p>Mer, golf, montagne ou ville d'avenir.<br><strong>Des localisations stratégiques</strong><br>pour vivre ou investir.</p>
+                <a class="btn btn-outline-navy" href="#implantations">En savoir plus</a>
+              </div>
+              <img src="assets/excelia/investment-palms.jpg" alt="Route bordée de palmiers en bord de mer">
+            </article>
+
+            <article class="testimonial-card">
+              <div>
+                <p class="eyebrow">Témoignages</p>
+                <h2>Ils nous font confiance <span>“</span></h2>
+                <p>Un accompagnement sérieux du début à la fin.<br>Notre appartement à Saïdia est livré à temps,<br>avec des finitions de qualité.</p>
+                <strong>— Famille El Amrani, Résidence Al Karam</strong>
+                <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              </div>
+              <img src="assets/excelia/testimonial-couple.jpg" alt="Couple face à la mer">
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="locations section-pad" id="implantations" aria-labelledby="locations-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Nos implantations</p>
+            <h2 id="locations-title">Trois villes, trois cadres de vie uniques</h2>
+            <p>Bureaux de vente à votre proximité</p>
+          </div>
+
+          <div class="location-grid">
+            <article class="location-card">
+              <img src="assets/excelia/location-saidia.jpg" alt="Saïdia, la perle bleue de la Méditerranée">
+              <div class="location-details">
+                <p><svg><use href="#icon-map-pin"></use></svg><span><strong>Bureau de vente</strong>Marina Saïdia, Boulevard Hassan II, Saïdia</span></p>
+                <p><svg><use href="#icon-calendar"></use></svg><span><strong>Horaires d'ouverture</strong>Lun - Sam : 9h00 - 18h00</span></p>
+                <p><svg><use href="#icon-phone"></use></svg><span><strong>Téléphone</strong>+212 6 12 34 56 78</span></p>
+                <a href="#contact">Nous rendre visite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+            <article class="location-card">
+              <img src="assets/excelia/location-marrakech.jpg" alt="Marrakech, au coeur de l'Atlas Golf Resort">
+              <div class="location-details">
+                <p><svg><use href="#icon-map-pin"></use></svg><span><strong>Bureau de vente</strong>Atlas Golf Resort, Route de Fès, Marrakech</span></p>
+                <p><svg><use href="#icon-calendar"></use></svg><span><strong>Horaires d'ouverture</strong>Lun - Sam : 9h00 - 18h00</span></p>
+                <p><svg><use href="#icon-phone"></use></svg><span><strong>Téléphone</strong>+212 6 61 23 45 67</span></p>
+                <a href="#contact">Nous rendre visite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+            <article class="location-card">
+              <img src="assets/excelia/location-fnideq.jpg" alt="Fnideq, la côte du Nord">
+              <div class="location-details">
+                <p><svg><use href="#icon-map-pin"></use></svg><span><strong>Bureau de vente</strong>Corniche de Fnideq, Route de Ceuta, Fnideq</span></p>
+                <p><svg><use href="#icon-calendar"></use></svg><span><strong>Horaires d'ouverture</strong>Lun - Sam : 9h00 - 18h00</span></p>
+                <p><svg><use href="#icon-phone"></use></svg><span><strong>Téléphone</strong>+212 6 78 90 12 34</span></p>
+                <a href="#contact">Nous rendre visite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="news section-pad" id="actualites" aria-labelledby="news-title">
+        <div class="container">
+          <div class="section-head news-head">
+            <div>
+              <p class="eyebrow">Actualités & avancement</p>
+              <h2 id="news-title">Suivez nos actualités</h2>
+            </div>
+            <a href="#actualites">Voir toutes les actualités <svg><use href="#icon-arrow"></use></svg></a>
+          </div>
+
+          <div class="news-grid">
+            <article class="news-card">
+              <img src="assets/excelia/news-chantier.jpg" alt="Avancement chantier La Perle de l'Orientale">
+              <div>
+                <time datetime="2026-05-15">15 mai 2026</time>
+                <h3>Avancement des travaux<br>La Perle de l'Orientale</h3>
+                <p>Le chantier avance à grands pas. Découvrez les dernières photos.</p>
+                <a href="#actualites">Lire la suite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="assets/excelia/news-livraison.jpg" alt="Résidence Al Karam livraison réussie">
+              <div>
+                <time datetime="2026-05-06">06 mai 2026</time>
+                <h3>Résidence Al Karam<br>Livraison réussie</h3>
+                <p>Nos clients prennent possession de leur bien.</p>
+                <a href="#actualites">Lire la suite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="assets/excelia/news-evenement.jpg" alt="Salon de l'immobilier de Marrakech">
+              <div>
+                <time datetime="2026-04-20">20 avr. 2026</time>
+                <h3>Salon de l'immobilier<br>de Marrakech</h3>
+                <p>Excelia Immobilier présent au SIMM du 18 au 21 avril 2026.</p>
+                <a href="#actualites">Lire la suite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="assets/excelia/news-opportunite.jpg" alt="Jardins de Moulouya dernières disponibilités">
+              <div>
+                <time datetime="2026-04-05">05 avr. 2026</time>
+                <h3>Jardins de Moulouya<br>Dernières disponibilités</h3>
+                <p>Profitez des dernières opportunités à partir de 320 000 DH.</p>
+                <a href="#actualites">Lire la suite <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" id="newsletter" aria-label="Newsletter">
+        <div class="container">
+          <div class="newsletter-panel">
+            <div class="newsletter-copy">
+              <span class="mail-circle"><svg><use href="#icon-mail"></use></svg></span>
+              <div>
+                <h2>Restez informé de nos nouveautés</h2>
+                <p>Recevez en avant-première nos nouveaux projets et opportunités d'investissement.</p>
+              </div>
+            </div>
+            <form action="#" class="newsletter-form">
+              <label for="newsletter-email" class="sr-only">Votre email</label>
+              <input id="newsletter-email" type="email" placeholder="Votre email">
+              <button class="btn btn-gold" type="submit">S'inscrire</button>
+              <p><svg><use href="#icon-lock"></use></svg>Vos données sont 100% confidentielles.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="assets/excelia/logo-excelia-transparent.png" alt="Excelia Résidences & Resorts">
+            <p>Promoteur immobilier au Maroc, nous créons des résidences modernes et durables alliant confort, qualité et innovation.</p>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="#contact" aria-label="Facebook">f</a>
+              <a href="#contact" aria-label="Instagram">◎</a>
+              <a href="#contact" aria-label="YouTube">▶</a>
+              <a href="#contact" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="#accueil">Accueil</a>
+            <a href="#projets">Nos projets</a>
+            <a href="#investir">Investir</a>
+            <a href="#implantations">À propos</a>
+            <a href="#actualites">Actualités</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h3>Nos projets</h3>
+            <a href="#projets">Saïdia</a>
+            <a href="#projets">Marrakech</a>
+            <a href="#projets">Fnideq</a>
+            <a href="#projets">Appartements</a>
+            <a href="#projets">Villas</a>
+            <a href="#projets">Terrains</a>
+            <a href="#projets">Commerces</a>
+          </div>
+          <div class="footer-col">
+            <h3>Investir</h3>
+            <a href="#investir">Pourquoi investir ?</a>
+            <a href="#investir">Financement</a>
+            <a href="#investir">Rendement locatif</a>
+            <a href="#investir">Espace MRE</a>
+            <a href="#investir">Simulateur de crédit</a>
+          </div>
+          <div class="footer-contact">
+            <h3>Nous contacter</h3>
+            <a href="tel:0520327193"><svg><use href="#icon-phone"></use></svg>05 20 32 71 93</a>
+            <a href="tel:0520439470"><svg><use href="#icon-phone"></use></svg>05 20 43 94 70</a>
+            <a href="tel:+212669545935"><svg><use href="#icon-phone"></use></svg>+212 669 545 935</a>
+            <a href="mailto:info@excelia.ma"><svg><use href="#icon-mail"></use></svg>info@excelia.ma</a>
+            <p><strong>Bureaux de vente :</strong><br>Saïdia • Marrakech • Fnideq</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Excelia Immobilier. Tous droits réservés.</p>
+          <p>Site réalisé par RichMedia.ma</p>
+        </div>
+      </div>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/212669545935" target="_blank" rel="noopener" aria-label="Contacter Excelia sur WhatsApp">
+      <svg><use href="#icon-whatsapp"></use></svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
